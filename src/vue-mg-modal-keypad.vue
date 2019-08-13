@@ -15,8 +15,6 @@
 <script>
 import keyboard from 'vue-keyboard';
 import ModalDialog from 'vue-mg-modal-dialog'
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 export default {
     props: {
         value: {
