@@ -21,7 +21,8 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "vue-keyboard": "^3.1.0"
+    "vue-keyboard": "^3.1.0",
+    "vue-mg-modal-dialog": "^1.0.6"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
@@ -36,7 +37,6 @@
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-vue": "^5.0.0",
     "vue": "^2.6.10",
-    "vue-mg-modal-dialog": "^1.0.6",
     "vue-template-compiler": "^2.6.10"
   }
 }
