@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import keyboard from 'vue-keyboard';
+import keyboard from './keyboard'
 import ModalDialog from 'vue-mg-modal-dialog'
 export default {
     props: {
