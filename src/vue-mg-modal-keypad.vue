@@ -1,7 +1,7 @@
 <template>
 <div>
     <input type="input" class="form-control modal-keypad" readonly v-model="val" @click="show">
-    <modal-dialog :show="showModal" @close="showModal=false" hide-header="true" hide-footer="true" size="custom" width="300px">
+    <modal-dialog :show="showModal" @close="showModal=false" hide-header hide-footer size="custom" width="300px">
         <template v-slot:body>
             <div class="keypad-container">
                 <input type="input" class="form-control form-control-lg display" readonly v-model="val">
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import keyboard from './keyboard'
+import Keyboard from './keyboard.vue'
 import ModalDialog from 'vue-mg-modal-dialog'
 export default {
     props: {
@@ -57,7 +57,7 @@ export default {
         }
     },
     components: {
-        keyboard,
+        Keyboard,
         ModalDialog,
     }
 }

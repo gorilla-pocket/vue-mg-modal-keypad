@@ -10,7 +10,6 @@
 
 <script>
 import ModalKeypad from '../src/vue-mg-modal-keypad'
-import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 export default {
   data() {
