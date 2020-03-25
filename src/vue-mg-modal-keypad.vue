@@ -1,7 +1,7 @@
 <template>
 <div>
     <input type="input" class="form-control modal-keypad" :class="inputClass" readonly v-model="val" @click="show">
-    <modal-dialog :show="showModal" @close="showModal=false" hide-header hide-footer size="custom" width="300px">
+    <modal-dialog :show="showModal" @close="showModal=false" hide-header hide-footer size="custom" :width="width">
         <template v-slot:body>
             <div class="keypad-container">
                 <input type="input" class="form-control form-control-lg display" readonly v-model="val">
@@ -28,6 +28,9 @@ export default {
         },
         inputClass: {
             default: '',
+        },
+        width: {
+            default: '300px',
         }
     },
     data () {
