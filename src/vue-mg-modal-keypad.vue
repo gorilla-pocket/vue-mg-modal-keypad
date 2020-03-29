@@ -30,7 +30,7 @@ export default {
             default: '',
         },
         width: {
-            default: '300px',
+            default: '350px',
         }
     },
     data () {
