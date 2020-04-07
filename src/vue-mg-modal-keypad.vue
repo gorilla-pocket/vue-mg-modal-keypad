@@ -4,8 +4,8 @@
     <modal-dialog :show="showModal" @close="showModal=false" hide-header hide-footer size="custom" :width="width">
         <template v-slot:body>
             <div class="keypad-container">
-                <input type="input" class="form-control form-control-lg display" readonly v-model="val">
-                <keyboard v-model="val" :layouts="layouts" :maxlength="maxlength" @ok="ok" ></keyboard>
+                <input type="input" class="form-control form-control-lg display" readonly v-model="temp_val">
+                <keyboard v-model="temp_val" :layouts="layouts" :maxlength="maxlength" @ok="ok" ></keyboard>
             </div>
         </template>
     </modal-dialog>
@@ -33,32 +33,29 @@ export default {
             default: '350px',
         }
     },
-    data () {
+    data() {
         return {
             showModal: false,
             val: '',
+            temp_val: '',
         }
     },
-    mounted: function () {
+    mounted() {
         this.val = this.value ? String(this.value) : ''
     },
     watch: {
-        value: function () {
+        value() {
             this.val = this.value ? String(this.value) : ''
-        },
-        val: function () {
-            this.onInput()
         },
     },
     methods: {
-        show: function () {
+        show() {
+            this.temp_val = ''
             this.showModal = true
         },
-        onInput: function () {
-            // console.log(this.val)
+        ok() {
+            this.val = this.temp_val
             this.$emit('input', this.val)
-        },
-        ok: function () {
             this.showModal = false
         }
     },
