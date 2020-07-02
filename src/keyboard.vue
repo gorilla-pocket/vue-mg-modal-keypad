@@ -10,8 +10,8 @@
         :data-args="btn.args"
         :data-text="btn.value"
         :data-action="btn.action.name"
-        @click.prevent="btn.action.callable"
-        @mousedown.prevent=""
+        @pointerdown.prevent="btn.action.callable"
+        @mousedown.prevent="btn.action.callable"
       >
         <slot :name="btn.action.name || btn.value">
           {{ btn.value }}
